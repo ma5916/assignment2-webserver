@@ -71,6 +71,8 @@ def webServer(port=13331):
             # Fill in start
             response = b"HTTP/1.1 404 Not Found\r\n"
             response += b"Content-Type: text/html; charset=UTF-8\r\n"
+            response += b"Connection: keep-alive \r\n"
+            response += b"Server: Apache \r\n"
             response += b"\r\n"
             response += b"<html><body><h1>404 Not Found</h1></body></html>"
 
